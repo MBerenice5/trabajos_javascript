@@ -1,3 +1,5 @@
+//CLASE 12
+
 //Cada vez que pongo un prompt es necesaria esta línea de código:
 const prompt = require(`prompt-sync`)();
 
@@ -140,3 +142,58 @@ for (let i = 0; i < butacasCine.length; i++) {
         }
     }
 }
+
+//CLASE 13
+
+//Funciones DECLARADAS:
+//Bloque de código que nos permite agrupar una funcionalidad para usarla todas las veces que necesitemos.
+//Normalmente realiza una tarea especifica y retorna un valor como resultado.
+
+//Sintaxis
+//function nombreDeLaFuncion (parametros){
+    //Código a ejecutar
+//}
+
+
+function saludar(nombre) {
+    //Acá "nombre" es el parámetro y va a ser el valor que se pasa a la función cuando se invoca.
+    console.log("Hola " + nombre);
+}
+
+//Invocación de la función
+saludar("Berenice")
+
+//Ej 2:
+function sum (num1 , num2) {
+    return num1 + num2;
+}
+console.log(sum(3,4));
+
+//Ej 3: valores por defecto
+function saludo(nombre = "Visitante" , apellido = "Anónimo"){
+    return `Hola ${nombre} ${apellido}!`;
+}
+console.log(saludo("Berenice", "De la Vega"));
+//Si yo no lo pusiera argumentos, me mostraría "Visitante Anónimo" pero como yo le puse "Berenice De la Vega" me imprime el dato correcto.
+
+//Funciones EXPRESADAS: funcion asignada a una variable
+//En este caso la function es anonima : no tiene nombre
+let despedir = function (nombre) {
+    console.log("Adios " + nombre);
+}
+//Invocación
+despedir("Juan");
+
+//Ej2:
+let triplicar = function (numero) {
+    return numero * 3
+}
+console.log(triplicar(2));
+
+
+
+
+
+
+
+
